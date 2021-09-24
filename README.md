@@ -1,9 +1,14 @@
 # DiseaseModel
 
-To run program: 
-- go to DiseaseModel directory in command line and run the "run.sh" script (i.e. ./run.sh)
-- you will first need to install a C++ compiler and the Boost libraries
-- modify the run.sh file to control the disease parameters and the number of simulated individuals
+Before you run the program:
+
+To run program:
+- Depending on the folder you specify in "run.sh," you will need to create a folder called "Data" (for output data) in the main DiseaseModel folder
+- Before running the program, you will also need to run the python scripts "MakeIndivSeedFiles.py" and "MakeTopologySeedFiles.py"
+- The program is designed to be run from the command line. To do this, go to DiseaseModel directory in command line and run the "run.sh" script (i.e. ./run.sh)
+- You will first need to install a C++ compiler and the Boost libraries
+- Modify the run.sh file to control the disease parameters and the number of simulated individuals
+
 
 Credit:
 The original generic network model (GNM) code of which this project is based was written by Spencer Farrell.
