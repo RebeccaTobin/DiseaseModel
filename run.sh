@@ -14,9 +14,9 @@ Tag=0
 StartTime=0.0183
 tau=0.00915 # 5yr
 k_min=0
-k_max=2000  # k_min <= k <= k_max
+k_max=10000  # k_min <= k <= k_max
 knn_min=0
-knn_max=2000  # knn_min <= knn < knn_max
+knn_max=10000  # knn_min <= knn < knn_max
 p=500
 r=1.0
 
