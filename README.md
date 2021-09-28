@@ -21,7 +21,3 @@ The follow are the files that I wrote/changed a significant portion of:
 - main.cpp
 - SaveData.h
 
-
-How the program works:
-
-THIS SECTION IS UNDER CONSTRUCTION
