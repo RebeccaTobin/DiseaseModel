@@ -136,7 +136,7 @@ int main(int argc, char *argv[]) {
         	g2.seed(Seed);
 
         	// If nonzero nodes to damage and not control
-        	if (Parameters::p > 0 && Parameters::control.compare("C")){
+        	if (Parameters::M > 0 && Parameters::control.compare("C")){
 
         		// damage event occurs at t_on -> forget original time step
 				Time = Parameters::t_on;
@@ -162,15 +162,15 @@ int main(int argc, char *argv[]) {
 
 				// If there aren't enough undamaged nodes to damage, indiviudal is too
 				// sick (damaged) to get the disease
-				if (IDs.size() < Parameters::p){
+				if (IDs.size() < Parameters::M){
 
-					//std::cout << "size < p" << std::endl;
+					//std::cout << "size < M" << std::endl;
 					H::tooSick = true;
 				}
 
 				else{
 
-				// pick p random id's from eligible list
+				// pick M random id's from eligible list
 				PickRandomIDs(IDs);
 
 				// damage nodes, update local frailty and rates
@@ -186,7 +186,7 @@ int main(int argc, char *argv[]) {
         else if (!end_trigger && (Time+eps) > Parameters::EndTime) {
 
         	// If nonzero nodes to repair and not control
-        	if ((Parameters::r+eps) > 0.0 && Parameters::p > 0 && Parameters::control.compare("C")) {
+        	if ((Parameters::r+eps) > 0.0 && Parameters::M > 0 && Parameters::control.compare("C")) {
 
         		// repair event occurs at t_on + tau -> forget original time step
 				Time = Parameters::EndTime;
