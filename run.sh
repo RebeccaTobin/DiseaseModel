@@ -17,7 +17,7 @@ k_min=0
 k_max=10000  # k_min <= k <= k_max
 knn_min=0
 knn_max=10000  # knn_min <= knn < knn_max
-p=500
+m=0.02
 r=1.0
 
 make
@@ -25,8 +25,8 @@ make
 # loop through parameter values
 for StartTime in 0.0366 0.0549 0.0732 0.0915 0.1098 0.1281 0.1464 0.1647 0.183
 do
-    ./main $number $R $gammap $gamman $N $nd $alpha $avgdeg $Mortality $Folder $TopologyID $pA $Tag $StartTime $tau $k_min $k_max $knn_min $knn_max $p $r D
-    ./main $number $R $gammap $gamman $N $nd $alpha $avgdeg $Mortality $Folder $TopologyID $pA $Tag $StartTime $tau $k_min $k_max $knn_min $knn_max $p $r C
+    ./main $number $R $gammap $gamman $N $nd $alpha $avgdeg $Mortality $Folder $TopologyID $pA $Tag $StartTime $tau $k_min $k_max $knn_min $knn_max $m $r D
+    ./main $number $R $gammap $gamman $N $nd $alpha $avgdeg $Mortality $Folder $TopologyID $pA $Tag $StartTime $tau $k_min $k_max $knn_min $knn_max $m $r C
 done
 
 
