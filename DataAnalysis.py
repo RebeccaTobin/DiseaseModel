@@ -9,7 +9,7 @@ Created on Wed May 5 18:12:47 2021
 import DataAnalysis_classFile as D
 
 # location of disease data files
-path = ""
+path = "C:/DiseaseModel/Data/"
 
 # disease parameters
 
