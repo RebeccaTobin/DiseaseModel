@@ -66,9 +66,8 @@ void SetParameters(int argc, char *argv[]) {
     knn_min = atoi(argv[18]); std::cout << ", knn_min: " << knn_min;
     knn_max = atoi(argv[19]); std::cout << ", knn_max: " << knn_max;
     m = atof(argv[20]); std::cout << ", m: " << m;
-    r = atof(argv[21]); std::cout << ", r: " << r;
-	
     M = round(m*N); std::cout << ", m*N: " << M;
+    r = atof(argv[21]); std::cout << ", r: " << r;
     
     control = argv[22];
     if (!control.compare("C")) {
@@ -105,7 +104,7 @@ namespace SimulateVar {
 }
 
 
-// If you don't want any health output, add "MortalityOnly" to "CommandFile_Simulate.txt".
+// If you don't want any health outputs, add "MortalityOnly" to "CommandFile_Simulate.txt".
 // If you don't want the FIcurve file, add "MortalityAndQALYOnly" to "CommandFile_Simulate.txt".
 void SetSimulate() {
 
