@@ -81,10 +81,10 @@ std::vector<int> RemoveDamaged(std::vector<Node> &Network, std::vector<int> &IDs
 	return IDs;
 }
 
-// pick p random nodes from IDs vector, returns IDs vector with nodes removed
+// pick M=m*N random nodes from IDs vector, returns IDs vector with nodes removed
 void PickRandomIDs(std::vector<int> &IDs) {
     
-    if (IDs.size() != Parameters::p) { // don't need to erase anything if there are p nodes in IDs
+    if (IDs.size() != Parameters::M) { // don't need to erase anything if there are M nodes in IDs
 
 	if (IDs.size() > 1) {
         // Randomly shuffle vector
@@ -97,7 +97,7 @@ void PickRandomIDs(std::vector<int> &IDs) {
         //std::cout << "..." << std::endl;
     }
         
-    IDs.erase( IDs.begin() + Parameters::p, IDs.end() );
+    IDs.erase( IDs.begin() + Parameters::M, IDs.end() );
     
     //std::cout << "IDs size is after erase is : " << IDs.size() << std::endl;
     
