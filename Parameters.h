@@ -30,10 +30,11 @@ namespace Parameters {
     int k_max;  // Maximum connectivity of nodes to be damaged at a different rate
     int knn_min;  // Minimum ave neighbour connectivity of nodes to be damaged at a different rate
     int knn_max;  // Maximum ave neighbour connectivity of nodes to be damaged at a different rate
-    int m; // Fraction of N nodes to be damaged at a different rate; m*N must be <= number of eligable nodes
+    double m; // Fraction of N nodes to be damaged at a different rate; m*N must be <= number of eligable nodes
     double r; // Fraction of p nodes repaired at the end of the disease
     std::string control; // If "C", no disease
     
+    int M; // M = m*N
     double EndTime; // StartTime + tau
 }	
 
@@ -66,6 +67,8 @@ void SetParameters(int argc, char *argv[]) {
     knn_max = atoi(argv[19]); std::cout << ", knn_max: " << knn_max;
     m = atof(argv[20]); std::cout << ", m: " << m;
     r = atof(argv[21]); std::cout << ", r: " << r;
+	
+    M = round(m*N); std::cout << ", m*N: " << M;
     
     control = argv[22];
     if (!control.compare("C")) {
@@ -73,7 +76,6 @@ void SetParameters(int argc, char *argv[]) {
     }
 
     EndTime = t_on + tau;
-    M = round(m*N);
    
 	std::cout << std::endl;
 	std::cout << std::endl;
