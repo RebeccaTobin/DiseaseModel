@@ -6,18 +6,18 @@ Created on Wed May 5 18:12:47 2021
 """
 
 #%%
-import Example1_classFile as D
+import DataAnalysis_classFile as D
 
-#
-path = "C:/DiseaseModel3Data/publishedModelData/"
+# location of disease data files
+path = ""
 
 # disease parameters
 
-Number = 100000
+Number = 1000
 # Gammap, Gamman, N, Number, R, nd, Alpha, AveDeg, pA, TopologyID, Mortality
 GNMpara = [7.5,6.5,10000,Number,3.0,2,2.27,4,0.0,1,"AND"]
 
-# Control, IndivSeedFile, t_on, tau, k_min, k_max, knn_min, knn_max, p, r
+# Control, IndivSeedFile, t_on, tau, k_min, k_max, knn_min, knn_max, m, r
 Dvals = []
 
 IndivSeedFile = 0
@@ -27,8 +27,8 @@ knn = [0,10000]
 
 for t_on in [0.0915]:
     for tau in [0.00183]:
-        for p in [500]:
-            Dvals.append((IndivSeedFile, t_on, tau, k[0], k[1], knn[0], knn[1], p, r))
+        for m in [0.02]:
+            Dvals.append((IndivSeedFile, t_on, tau, k[0], k[1], knn[0], knn[1], m, r))
 
 # create disease objects
 

@@ -489,7 +489,7 @@ class GNM_parameters:
  
        
 class Disease_parameters:
-    def __init__(self, IndivSeedFile, t_on, tau, k_min, k_max, knn_min, knn_max, p, r):
+    def __init__(self, IndivSeedFile, t_on, tau, k_min, k_max, knn_min, knn_max, m, r):
         self.IndivSeedFile=IndivSeedFile # Num of IndivSeedFile used to seed each individual
         self.t_on = t_on # onset age of disease, unitless (must be scaled by Gamma0)
         self.tau = tau # length of disease, unitless
@@ -497,7 +497,7 @@ class Disease_parameters:
         self.k_max = k_max # max degree of nodes targed
         self.knn_min = knn_min # min nearest neighbour degree of nodes targed
         self.knn_max = knn_max # max nearest neighbour degree of nodes targed
-        self.p = p # num of nodes targed by the disease
+        self.m = m # fraction of N nodes targed by the disease
         self.r = r # fraction of damaged nodes repaired
     
     
@@ -506,11 +506,11 @@ class File:
             
         self.file_ending = "Gammap{}Gamman{}N{}Number{}R{}nd{}Alpha{}" \
         "AvgDeg{}{}TopologyID{}pA{}IndivSeedFile{}t_on{}tau{}k_min{}k_max{}" \
-        "knn_min{}knn_max{}p{}r{}".format(d.GNMpara.Gammap, d.GNMpara.Gamman, \
+        "knn_min{}knn_max{}m{}r{}".format(d.GNMpara.Gammap, d.GNMpara.Gamman, \
         d.GNMpara.N, d.GNMpara.Number,d.GNMpara.R, d.GNMpara.nd, d.GNMpara.Alpha, \
         d.GNMpara.AveDeg, d.GNMpara.Mortality, d.GNMpara.TopologyID, d.GNMpara.pA, \
         d.Dpara.IndivSeedFile,d.Dpara.t_on, d.Dpara.tau, d.Dpara.k_min, \
-        d.Dpara.k_max, d.Dpara.knn_min, d.Dpara.knn_max, d.Dpara.p, d.Dpara.r)
+        d.Dpara.k_max, d.Dpara.knn_min, d.Dpara.knn_max, d.Dpara.m, d.Dpara.r)
             
 
     def getDeathAgesFN(self, control):
