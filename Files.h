@@ -47,8 +47,8 @@ std::string SetRawName(int NNodes = Parameters::N) {
 	+ std::to_string(TopologyID) + "pA" + to_string(p_assortativity)
 	+ "IndivSeedFile" + std::to_string(IndivSeedFile) + "t_on" + to_string(t_on)+ "tau" + to_string(tau)
 	+ "k_min" + std::to_string(k_min) + "k_max" + std::to_string(k_max)
-	+ "knn_min" + std::to_string(knn_min) + "knn_max" + std::to_string(knn_max) + "p"
-	+ std::to_string(p) + "r" + to_string(r);
+	+ "knn_min" + std::to_string(knn_min) + "knn_max" + std::to_string(knn_max) + "m"
+	+ std::to_string(m) + "r" + to_string(r);
 }
 
 
